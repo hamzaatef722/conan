@@ -1,0 +1,104 @@
+:root {
+    --overlay-color: rgba(0, 0, 0, 0.6);
+    --main-color: #0077ff;
+    --main-color-rgb: 0, 119, 255;
+    --secondary-color: #fff;
+    --red-color: #E50F40;
+    --red-color-rgb: 229, 15, 64;
+    --shadow: 0px 0px 2.5rem rgba(29, 58, 83, 0.15);
+    --orange-color: #fd7e13;
+    --orange-color-rgb: 253, 126, 19;
+    --body-color: #747579;
+    --black-color: #000;
+}
+
+body {
+    color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black-color)
+}
+
+ul {
+    list-style-type: none;
+}
+
+.text-danger {
+    --bs-danger-rgb: var(--red-color-rgb);
+}
+
+.text-orange {
+    color: var(--orange-color);
+}
+
+.my-nav .navbar-brand img{
+    width: 5rem;
+}
+
+.my-nav .nav-link.active,
+ .my-nav .nav-link.show {
+    --bs-navbar-active-color: var(--main-color);
+}
+
+.nav-link:hover{
+    color: var(--main-color);
+}
+
+.card{
+    box-shadow: var(--shadow) ;
+}
+
+.my-item img {
+    width: 5rem;
+    height: 5rem;
+    margin-top: -2.5rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-indent: 0;
+}
+
+.my-item h3::before{
+    content: "";
+                width: 10%;
+                height: 0.25rem;
+                background-color: var(--main-color);
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -10px
+}
+
+.char-box .overlay{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.overlay-caption{
+    transform: translatex(150%);
+    transition: all 1s 0.8s ease;
+}
+
+.char-box:hover .overlay-caption{
+    transform: translateX(0);
+}
+
+.char-box .overlay:hover {
+    opacity: 1;
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
